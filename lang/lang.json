@@ -1,0 +1,50 @@
+{
+  "en": {
+    "heroTagline": "Trusted surgical solutions for over 20 years in Chile",
+    "aboutTitle": "About Us",
+    "aboutText1": "Orthomax has over 20 years of experience in the craniomaxillofacial surgery field, working with hospitals and surgeons across Chile.",
+    "aboutText2": "Our mission is clear: to deliver reliable surgical solutions and equipment that healthcare professionals can trust.",
+    "eventsTitle": "Event Participation",
+    "eventsNote": "At Orthomax, we believe participating in local events and interacting with our clients is essential to truly understand their needs and to build stronger relationships and trust with doctors.",
+    "contactTitle": "Contact",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "instagramLabel": "Instagram"
+  },
+  "es": {
+    "heroTagline": "Soluciones quirúrgicas confiables por más de 20 años en Chile",
+    "aboutTitle": "Sobre Nosotros",
+    "aboutText1": "Orthomax cuenta con más de 20 años de experiencia en el campo de la cirugía cráneo-maxilofacial, trabajando con hospitales y cirujanos en todo Chile.",
+    "aboutText2": "Nuestra misión es clara: entregar soluciones y equipos quirúrgicos confiables en los que los profesionales de la salud puedan confiar.",
+    "eventsTitle": "Participación en Eventos",
+    "eventsNote": "En Orthomax creemos que participar en eventos locales e interactuar con nuestros clientes es esencial para comprender verdaderamente sus necesidades y construir relaciones más sólidas y de confianza con los médicos.",
+    "contactTitle": "Contacto",
+    "phoneLabel": "Teléfono",
+    "emailLabel": "Correo electrónico",
+    "instagramLabel": "Instagram"
+  },
+  "zh": {
+    "heroTagline": "在智利拥有超过20年经验的可信赖外科解决方案",
+    "aboutTitle": "关于我们",
+    "aboutText1": "Orthomax 在颅颌面外科领域拥有超过20年的经验，与智利的医院和外科医生合作。",
+    "aboutText2": "我们的使命很明确：提供可靠的外科解决方案和设备，值得医疗专业人员信赖。",
+    "eventsTitle": "活动参与",
+    "eventsNote": "在 Orthomax，我们相信参与本地活动并与客户互动对于真正理解他们的需求，以及与医生建立更牢固的关系和信任至关重要。",
+    "contactTitle": "联系方式",
+    "phoneLabel": "电话",
+    "emailLabel": "电子邮件",
+    "instagramLabel": "Instagram"
+  },
+  "pt": {
+    "heroTagline": "Soluções cirúrgicas confiáveis por mais de 20 anos no Chile",
+    "aboutTitle": "Sobre Nós",
+    "aboutText1": "A Orthomax tem mais de 20 anos de experiência no campo da cirurgia craniomaxilofacial, trabalhando com hospitais e cirurgiões em todo o Chile.",
+    "aboutText2": "Nossa missão é clara: fornecer soluções e equipamentos cirúrgicos confiáveis em que os profissionais de saúde possam confiar.",
+    "eventsTitle": "Participação em Eventos",
+    "eventsNote": "Na Orthomax, acreditamos que participar de eventos locais e interagir com nossos clientes é essencial para realmente compreender suas necessidades e construir relações mais fortes e de confiança com os médicos.",
+    "contactTitle": "Contato",
+    "phoneLabel": "Telefone",
+    "emailLabel": "Email",
+    "instagramLabel": "Instagram"
+  }
+}

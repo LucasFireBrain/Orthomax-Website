@@ -1,0 +1,136 @@
+<!--/*website-project/
+│
+├── index.html              # main page
+│
+├── css/
+│   └── style.css           # global styles
+│
+├── js/
+│   ├── script.js           # main JS (language switching, general interactivity)
+│   └── carousel.js         # carousel logic (optional, if you want modularity)
+│
+├── lang/
+│   ├── en.json             # English translations
+│   ├── es.json             # Spanish translations
+│   ├── zh.json             # Simplified Chinese translations
+│   └── pt.json             # Portuguese translations
+│
+├── img/
+│   ├── logo.png            # company logo
+│   ├── hero-bg.jpg         # background image for hero section
+│   ├── event1.jpg          # carousel photos
+│   ├── event2.jpg
+│   └── event3.jpg
+│
+└── favicon.ico             # optional site icon*//-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orthomax</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" sizes="16x16" href="favicon-16.ico">
+  <link rel="icon" type="image/x-icon" sizes="32x32" href="favicon-32.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="img/logo.png" alt="Orthomax">
+    </div>
+    <div class="language-selector">
+      <select id="language-switcher">
+        <option value="en" selected>English</option>
+        <option value="es">Español</option>
+        <option value="zh">中文</option>
+        <option value="pt">Português</option>
+      </select>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 data-i18n="heroTagline">Trusted surgical solutions for over 20 years in Chile</h1>
+    </div>
+  </section>
+
+  <!-- About / Mission -->
+  <section class="about">
+    <h2 data-i18n="aboutTitle">About Us</h2>
+    <p data-i18n="aboutText1">
+      Orthomax has over 20 years of experience in the craniomaxillofacial surgery field,
+      working with hospitals and surgeons across Chile.
+    </p>
+    <p class="mission" data-i18n="aboutText2">
+      Our mission is clear: to deliver reliable surgical solutions and equipment that healthcare professionals can trust.
+    </p>
+  </section>
+
+    <!-- Event Photos Carousel -->
+  <section class="events">
+    <h2 data-i18n="eventsTitle">Event Participation</h2>
+    <div class="carousel">
+      <div class="slides">
+        <div class="slide active">
+          <img src="img/event1.jpg" alt="Event 1">
+        </div>
+        <div class="slide">
+          <img src="img/event2.jpg" alt="Event 2">
+        </div>
+        <div class="slide">
+          <img src="img/event3.jpg" alt="Event 3">
+        </div>
+        <div class="slide">
+          <img src="img/event4.jpg" alt="Event 4">
+        </div>
+      </div>
+      <button class="prev">&#10094;</button>
+      <button class="next">&#10095;</button>
+      <div class="dots"></div>
+    </div>
+    <p class="events-note" data-i18n="eventsNote">
+      At Orthomax, we believe participating in local events and interacting with our clients
+      is essential to truly understand their needs and to build stronger relationships and trust with doctors.
+    </p>
+  </section>
+
+
+    <!-- Contact -->
+  <section class="contact">
+    <h2 data-i18n="contactTitle">Contact</h2>
+    <div class="contact-grid">
+      <div>
+        <h3 data-i18n="phoneLabel">Phone</h3>
+        <a href="tel:+56912345678">+56 9 1234 5678</a>
+      </div>
+      <div>
+        <h3 data-i18n="emailLabel">Email</h3>
+        <a href="mailto:info@orthomax.cl">info@orthomax.cl</a>
+      </div>
+      <div>
+        <h3 data-i18n="instagramLabel">Instagram</h3>
+        <a href="https://instagram.com/orthomax" target="_blank">@orthomax</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Orthomax</p>
+  </footer>
+
+  <script src="js/carousel.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
