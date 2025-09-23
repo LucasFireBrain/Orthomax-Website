@@ -9,47 +9,35 @@ async function loadTranslations() {
   }
 }
 
-// Detect browser/system language
 function detectUserLanguage() {
   const lang = navigator.language || navigator.userLanguage;
-
   if (lang.startsWith("es")) return "es";
   if (lang.startsWith("zh")) return "zh";
   if (lang.startsWith("pt")) return "pt";
   return "en"; // fallback
 }
 
-// Apply translations to the page
 function setLanguage(lang) {
   if (!window.translations || !window.translations[lang]) return;
 
-  const t = window.translations[lang];
-  document.getElementById("hero-tagline").textContent = t.heroTagline;
-  document.getElementById("about-title").textContent = t.aboutTitle;
-  document.getElementById("about-text1").textContent = t.aboutText1;
-  document.getElementById("about-text2").textContent = t.aboutText2;
-  document.getElementById("events-title").textContent = t.eventsTitle;
-  document.getElementById("events-note").textContent = t.eventsNote;
-  document.getElementById("contact-title").textContent = t.contactTitle;
-
-  // Contact info
-  document.getElementById("contact-phone").textContent = t.contactPhone;
-  document.getElementById("contact-email").textContent = t.contactEmail;
-  document.getElementById("contact-instagram").textContent = t.contactInstagram;
+  // Find all elements with data-i18n and replace text
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (window.translations[lang][key]) {
+      el.textContent = window.translations[lang][key];
+    }
+  });
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
   window.translations = await loadTranslations();
 
-  // Detect user language and set it
   const defaultLang = detectUserLanguage();
   setLanguage(defaultLang);
 
-  // Sync dropdown to detected language
   const languageSelect = document.getElementById("languageSelect");
   languageSelect.value = defaultLang;
 
-  // Change language when dropdown changes
   languageSelect.addEventListener("change", (e) => {
     setLanguage(e.target.value);
   });
