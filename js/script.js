@@ -20,7 +20,6 @@ function detectUserLanguage() {
 function setLanguage(lang) {
   if (!window.translations || !window.translations[lang]) return;
 
-  // Find all elements with data-i18n and replace text
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.getAttribute("data-i18n");
     if (window.translations[lang][key]) {
@@ -32,12 +31,19 @@ function setLanguage(lang) {
 document.addEventListener("DOMContentLoaded", async () => {
   window.translations = await loadTranslations();
 
+  const languageSelect = document.getElementById("languageSelect");
+
+  if (!languageSelect) {
+    console.error("Language dropdown not found in DOM!");
+    return;
+  }
+
+  // detect browser language first
   const defaultLang = detectUserLanguage();
   setLanguage(defaultLang);
-
-  const languageSelect = document.getElementById("languageSelect");
   languageSelect.value = defaultLang;
 
+  // allow user override
   languageSelect.addEventListener("change", (e) => {
     setLanguage(e.target.value);
   });
