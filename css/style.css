@@ -9,16 +9,22 @@ body {
   font-family: 'Open Sans', sans-serif;
   line-height: 1.6;
   color: #333;
+  padding-top: 80px;   /* prevent content hiding behind fixed header */
 }
 
 /* Header */
 header {
+  position: fixed;       /* keep header visible */
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 15px 20px;
   background: #fff;
   border-bottom: 1px solid #ddd;
+  z-index: 1000;
 }
 
 .logo img {
