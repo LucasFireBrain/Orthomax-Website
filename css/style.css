@@ -110,6 +110,7 @@ header {
   font-size: clamp(2rem, 4vw, 2.8rem);
   font-weight: 700;
   line-height: 1.3;
+  color: #fff; /* keep hero tagline white */
 }
 
 /* Sections */
@@ -120,6 +121,17 @@ section {
 section:not(.hero) {
   max-width: 1000px;
   margin: 0 auto;
+}
+
+/* Section Headers in Orange */
+.about h2,
+.events h2,
+.contact h2 {
+  color: #ee7208;
+}
+
+.contact-item h3 {
+  color: #ee7208;
 }
 
 /* Events / Carousel */
@@ -237,8 +249,4 @@ footer {
   background: #222;
   color: #fff;
   font-size: 0.9rem;
-}
-
-h1, h2, h3 {
-  color: #ee7208;  /* orange from your logo */
 }
