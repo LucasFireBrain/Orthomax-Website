@@ -238,3 +238,7 @@ footer {
   color: #fff;
   font-size: 0.9rem;
 }
+
+h1, h2, h3 {
+  color: #ee7208;  /* orange from your logo */
+}
