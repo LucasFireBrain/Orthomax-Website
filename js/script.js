@@ -14,7 +14,7 @@ function detectUserLanguage() {
   if (lang.startsWith("es")) return "es";
   if (lang.startsWith("zh")) return "zh";
   if (lang.startsWith("pt")) return "pt";
-  return "en";
+  return "en"; // fallback
 }
 
 function setLanguage(lang) {
@@ -32,12 +32,18 @@ document.addEventListener("DOMContentLoaded", async () => {
   window.translations = await loadTranslations();
 
   const languageSelect = document.getElementById("languageSelect");
-  if (!languageSelect) return;
 
+  if (!languageSelect) {
+    console.error("Language dropdown not found in DOM!");
+    return;
+  }
+
+  // detect browser language first
   const defaultLang = detectUserLanguage();
   setLanguage(defaultLang);
   languageSelect.value = defaultLang;
 
+  // allow user override
   languageSelect.addEventListener("change", (e) => {
     setLanguage(e.target.value);
   });

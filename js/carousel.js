@@ -1,11 +1,15 @@
+// Carousel with autoplay + fade
 let slideIndex = 0;
 let slides, dotsContainer, autoPlayInterval;
 
 function initCarousel() {
   slides = document.querySelectorAll(".slide");
   dotsContainer = document.querySelector(".dots");
+
+  // Clear old dots (in case of re-init)
   dotsContainer.innerHTML = "";
 
+  // Generate dots
   slides.forEach((_, i) => {
     let dot = document.createElement("span");
     dot.addEventListener("click", () => {
@@ -15,6 +19,7 @@ function initCarousel() {
     dotsContainer.appendChild(dot);
   });
 
+  // Attach arrow controls
   document.querySelector(".prev").addEventListener("click", () => {
     changeSlide(-1);
   });
@@ -22,6 +27,7 @@ function initCarousel() {
     changeSlide(1);
   });
 
+  // Start
   showSlide(slideIndex);
   startAutoplay();
 }
@@ -51,4 +57,5 @@ function resetAutoplay() {
   startAutoplay();
 }
 
+// Initialize once DOM is ready
 document.addEventListener("DOMContentLoaded", initCarousel);
