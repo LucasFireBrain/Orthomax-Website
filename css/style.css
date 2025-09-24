@@ -63,6 +63,12 @@ header {
   font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
   font-weight: 700;
+  color: #fff; /* keep hero title white */
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: #e85c0d; /* orange */
 }
 
 /* Sections */
